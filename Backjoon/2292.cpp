@@ -9,7 +9,7 @@ int main() {
 			room = y + 1;
 			break;
 		}
-		++;
+		y++;
 		x += y;
 	}
 	printf("%d", room);
