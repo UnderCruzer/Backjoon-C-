@@ -1,6 +1,5 @@
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
-//a=학생들 점수
 
 int main() {
 	int C = 0;  // num - test
