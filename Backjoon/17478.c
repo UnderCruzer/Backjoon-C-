@@ -27,7 +27,7 @@ void message(int n) {
 
 
 int main() {
-	scanf("%d", &N);
-	puts("어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.");
-	message(1);
+    scanf("%d", &N);
+    puts("어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.");
+    message(1);
 }
