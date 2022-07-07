@@ -4,30 +4,31 @@
 int main() {
 	int N, count = 0;
 
-	// ÀüÃ¼ »ç¶÷ÀÇ ¼ö°¡ 50±îÁö ÀÌ±â¿¡ 50±îÁö ¹è¿­ ¸¸µé±â x,y´Â ¸ö¹«°Ô¿Í Å°¸¦ ¸»ÇÑ´Ù.
+	// ì „ì²´ ì‚¬ëžŒì˜ ìˆ˜ê°€ 50ê¹Œì§€ ì´ê¸°ì— 50ê¹Œì§€ ë°°ì—´ ë§Œë“¤ê¸° x,yëŠ” ëª¸ë¬´ê²Œì™€ í‚¤ë¥¼ ë§í•œë‹¤.
 	int weight[50] = { 0, };
 	int height[50] = { 0, };
 	
-	// ÀüÃ¼ »ç¶÷ ¼ö ÀÔ·Â : Ã¹ ÁÙ¿¡´Â ÀüÃ¼ »ç¶÷¼ö nÀÌ ³ª¿Í¾ß ÇÔ 
+	// ì „ì²´ ì‚¬ëžŒ ìˆ˜ ìž…ë ¥ : ì²« ì¤„ì—ëŠ” ì „ì²´ ì‚¬ëžŒìˆ˜ nì´ ë‚˜ì™€ì•¼ í•¨ 
 	scanf_s("%d", &N);
 
-	// i º¯¼ö¸¦ ¸¸µé¾î i°¡ ³»°¡ ÀÔ·ÂÇÑ n°ª Àü±îÁö ¹Ýº¹ (¸ö¹«°Ô¿Í Å° °ª ÀÔ·Â)
+	// i ë³€ìˆ˜ë¥¼ ë§Œë“¤ì–´ iê°€ ë‚´ê°€ ìž…ë ¥í•œ nê°’ ì „ê¹Œì§€ ë°˜ë³µ (ëª¸ë¬´ê²Œì™€ í‚¤ ê°’ ìž…ë ¥)
 	for (int i = 0; i < N; i++) 
 		scanf_s("%d %d", &weight[i], &height[i]);
 	
 	
-	// µ¢Ä¡ µî¼ö ¸¸µé±â À§ÇÑ brute force ¾Ë°í¸®Áò ÀÌ¿ë
+	// ë©ì¹˜ ë“±ìˆ˜ ë§Œë“¤ê¸° ìœ„í•œ brute force ì•Œê³ ë¦¬ì¦˜ ì´ìš©
 	for (int i = 0; i < N; i++) {
 		count = 0;
 
 		for (int j = 0; j < N; j++) {
 
-	// ¸ö¹«°Ô¿Í Å°°¡ ÀÛÀ¸¸é count °ª Áõ°¡
+	// ëª¸ë¬´ê²Œì™€ í‚¤ê°€ ìž‘ìœ¼ë©´ count ê°’ ì¦ê°€
 			if (weight[i] < weight[j] && height[i] < height[j]) {
 				count++;
-		}
-	// for¹®¿¡¼­ ³ª¿Í¼­ ³ª¸ÓÁö°¡ ÀÚ½Åº¸´Ù Å« µ¢Ä¡ÀÎ ÀÎ¿øÀ» count·Î ÇÏ°í + 1 ÇÒ °Í
+			}
+	// forë¬¸ì—ì„œ ë‚˜ì™€ì„œ ë‚˜ë¨¸ì§€ê°€ ìžì‹ ë³´ë‹¤ í° ë©ì¹˜ì¸ ì¸ì›ì„ countë¡œ í•˜ê³  + 1 í•  ê²ƒ
 		printf("%d", count+1);
-	}
+		}
 	return 0;
+	}
 }
